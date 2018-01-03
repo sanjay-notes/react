@@ -1,4 +1,13 @@
 {
+  "name": "react-notes",
+  "version": "1.0.0",
+  "description": "React Notes",
+  "author": "Sanjay Krishna Anbalagan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanjay-notes/react.git"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
