@@ -1,0 +1,39 @@
+{
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.6.1",
+    "eslint-loader": "^1.9.0",
+    "fs-extra": "^4.0.2",
+    "rimraf": "^2.6.2",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
+  },
+  "dependencies": {
+    "builders": "git+https://github.com/sanjay-notes/builders.git",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-tabs": "^2.1.1"
+  },
+  "scripts": {
+    "build": "webpack --progress --config webpack.config.js --env prod",
+    "lint": "eslint ./src --ext .js --cache --fix --ext .jsx --cache --fix",
+    "postbuild": "node scripts/postbuild.js",
+    "prebuild": "rimraf dist",
+    "publish": "git subtree push --prefix dist origin gh-pages",
+    "release:breakingchange": "npm version major -m 'Bumped major version number' && npm run release:master",
+    "release:bugfix": "npm version patch -m 'Bumped patch version number' && npm run release:master",
+    "release:feature": "npm version minor -m 'Bumped minor version number' && npm run release:master",
+    "release:master": "git checkout master && git merge --squash --strategy-option theirs develop && git commit -am 'Release Commit' && git push && git checkout develop",
+    "start": "webpack-dev-server --progress --config webpack.config.js --open"
+  },
+  "files": [
+    "dist"
+  ]
+}
