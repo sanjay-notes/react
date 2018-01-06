@@ -6,6 +6,7 @@ import StackableButton from './StackableButton';
 import InlineRef from './InlineRef';
 import ParentChild from './ParentChild';
 import ReactComponent from './ReactComponent';
+import DivInPara from './DivInPara';
 import './app.css';
 
 
@@ -20,11 +21,15 @@ class App extends React.Component {
             <div>
                 <Tabs>
                     <TabList>
+                        <Tab>Inline Div in Para</Tab>
                         <Tab>Life Cycle</Tab>
                         <Tab>Parent Child</Tab>
                         <Tab>Ref</Tab>
                         <Tab>Mouse Event</Tab>
                     </TabList>
+                    <TabPanel>
+                        <DivInPara identifier="DivInPara"/>
+                    </TabPanel>
                     <TabPanel>
                         <ReactComponent identifier="React"/>
                     </TabPanel>

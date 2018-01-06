@@ -82,7 +82,6 @@ export default class StackableButton extends StackAbstract{
 						Button
 					</button>
 				</div>
-				<hr/>
 				<Stack identifier={this.props.identifier}/>
 			</div>
 		);

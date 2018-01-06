@@ -71,4 +71,8 @@ button {
     border-radius: 8px;
 }
 
+.inlineDiv {
+    display: inline;
+}
+
 
