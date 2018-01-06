@@ -35,7 +35,7 @@
     "lint": "eslint ./src --ext .js --cache --fix --ext .jsx --cache --fix",
     "postbuild": "node scripts/postbuild.js",
     "prebuild": "rimraf dist",
-    "publish": "git subtree push --prefix dist origin gh-pages",
+    "publish": "git checkout master && git subtree push --prefix dist origin gh-pages && git checkout develop",
     "release:breakingchange": "npm version major -m 'Bumped major version number' && npm run release:master",
     "release:bugfix": "npm version patch -m 'Bumped patch version number' && npm run release:master",
     "release:feature": "npm version minor -m 'Bumped minor version number' && npm run release:master",
