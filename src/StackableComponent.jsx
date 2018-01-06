@@ -9,7 +9,7 @@ export default class StackableComponent extends StackAbstract{
 	render(){
 		super.render();
 		return (
-			<div>
+			<div className={this.props.className}>
 				{this.props.children}
 			</div>
 		);

@@ -25,7 +25,7 @@ export default class ParentChild extends StackAbstract{
 						</div>
 					</Block>
 				</div>
-				<Stack identifier={['Parent', 'Child1', 'Child2']}/>
+				<Stack identifier={[this.props.identifier, 'Child1', 'Child2']}/>
 			</div>
 		);
 	}
